@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Sistema SENAI - Planejamento Escolar</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+    }
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #e0e0e0;
+      display: flex;
+      justify-content: space-around;
+      padding: 15px;
+    }
+    nav a {
+      color: #004080;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .container {
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+    .card h2 {
+      color: #004080;
+    }
+    input, select {
+      display: block;
+      margin: 5px 0 15px;
+      padding: 8px;
+      width: 100%;
+      max-width: 400px;
+    }
+    label {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Planejamento Escolar - SENAI Cabo</h1>
+</header>
+
+<nav>
+  <a href="#cursos">Cursos</a>
+  <a href="#disciplinas">Disciplinas</a>
+  <a href="#professores">Professores</a>
+  <a href="#turmas">Turmas</a>
+  <a href="#aulas">Aulas</a>
+  <a href="#substituicoes">Substituições</a>
+  <a href="#horarios">Horários</a>
+</nav>
+
+<div class="container">
+
+  <div class="card" id="cursos">
+    <h2>Gerenciar Cursos</h2>
+    <label>Nome do Curso</label>
+    <input type="text" placeholder="Ex: Técnico em Informática">
+    <label>Duração (em meses)</label>
+    <input type="number" placeholder="Ex: 18">
+    <label>Turnos Disponíveis</label>
+    <select>
+      <option>Manhã</option>
+      <option>Tarde</option>
+      <option>Noite</option>
+      <option>Todos</option>
+    </select>
+  </div>
+
+  <div class="card" id="disciplinas">
+    <h2>Gerenciar Disciplinas</h2>
+    <label>Nome da Disciplina</label>
+    <input type="text" placeholder="Ex: Programação Web">
+    <label>Curso Vinculado</label>
+    <input type="text" placeholder="Ex: Técnico em Informática">
+  </div>
+
+  <div class="card" id="professores">
+    <h2>Gerenciar Professores</h2>
+    <label>Nome do Professor</label>
+    <input type="text" placeholder="Ex: João da Silva">
+    <label>Disciplinas que Leciona</label>
+    <input type="text" placeholder="Ex: Programação Web, Redes">
+    <label>Disponibilidade</label>
+    <select multiple>
+      <option>Manhã</option>
+      <option>Tarde</option>
+      <option>Noite</option>
+    </select>
+  </div>
+
+  <div class="card" id="turmas">
+    <h2>Gerenciar Turmas</h2>
+    <label>Nome da Turma</label>
+    <input type="text" placeholder="Ex: INF-2025">
+    <label>Curso Relacionado</label>
+    <input type="text" placeholder="Ex: Técnico em Informática">
+    <label>Turno</label>
+    <select>
+      <option>Manhã</option>
+      <option>Tarde</option>
+      <option>Noite</option>
+    </select>
+  </div>
+
+  <div class="card" id="aulas">
+    <h2>Agendamento de Aulas</h2>
+    <label>Turma</label>
+    <input type="text" placeholder="Ex: INF-2025">
+    <label>Disciplina</label>
+    <input type="text" placeholder="Ex: Banco de Dados">
+    <label>Professor</label>
+    <input type="text" placeholder="Ex: Maria Souza">
+    <label>Data</label>
+    <input type="date">
+    <label>Horário</label>
+    <input type="time">
+  </div>
+
+  <div class="card" id="substituicoes">
+    <h2>Registrar Substituição</h2>
+    <label>Professor Original</label>
+    <input type="text" placeholder="Ex: João Silva">
+    <label>Professor Substituto</label>
+    <input type="text" placeholder="Ex: Ana Lima">
+    <label>Data da Substituição</label>
+    <input type="date">
+  </div>
+
+  <div class="card" id="horarios">
+    <h2>Disponibilidade de Horários</h2>
+    <label>Turno</label>
+    <select>
+      <option>Manhã</option>
+      <option>Tarde</option>
+      <option>Noite</option>
+    </select>
+    <label>Visualizar Horários</label>
+    <p>🕓 Segunda a Sexta: 07h às 22h (com divisão por turnos)</p>
+    <p>Disponibilizar slots para professores/turmas conforme turno selecionado.</p>
+  </div>
+
+</div>
+
+</body>
+</html>
